@@ -1,33 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+int calculateScore(vector<int> &player)
+{
+    int n = player.size();
+    int score = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if ((i >= 1 && player[i - 1] == 10) || (i >= 2 && player[i - 2] == 10))
+            score += 2 * player[i];
+        else
+            score += player[i];
+    }
+    return score;
+}
+
 int isWinner(vector<int> &player1, vector<int> &player2)
 {
-    int n = player1.size();
-    int score1 = player1[0];
-    if (n > 1 && score1 == 10)
-        score1 += 2 * player1[1];
-    else if (n > 1 && score1 != 10)
-        score1 += player1[1];
-
-    int score2 = player2[0];
-    if (n > 1 && score2 == 10)
-        score2 += 2 * player2[1];
-    else if (n > 1 && score2 != 10)
-        score2 += player2[1];
-
-    for (int i = 2; i < n; i++)
-    {
-        if (player1[i - 1] == 10 || player1[i - 2] == 10)
-            score1 += 2 * player1[i];
-        else
-            score1 += player1[i];
-
-        if (player2[i - 1] == 10 || player2[i - 2] == 10)
-            score2 += 2 * player2[i];
-        else
-            score2 += player2[i];
-    }
+    int score1 = calculateScore(player1);
+    int score2 = calculateScore(player2);
 
     if (score1 == score2)
         return 0;
