@@ -4,58 +4,50 @@ using namespace std;
 int canCompleteCircuit(vector<int> &gas, vector<int> &cost)
 {
     int n = gas.size();
-    int m = cost.size();
-    if (n == 1)
-    {
-        if (gas[0] >= cost[0])
-            return 0;
-        else
-            return -1;
-    }
-    int i = 0, index = 0, count = 0, rem = 0;
+    int totalGas = 0, totalCost = 0;
 
-    while (i < n)
+    for (int i = 0; i < n; i++)
     {
-        if (gas[i] <= cost[i])
-            i++;
-        else
-        {
-            index = i;
-            break;
-        }
+        totalGas += gas[i];
+        totalCost += cost[i];
     }
 
-    if (i == n)
+    if (totalCost > totalGas)
         return -1;
 
-    while (count < n && index < n)
+    int index = 0, rem = 0;
+    for (int i = 0; i < n; i++)
     {
         rem = rem + gas[i] - cost[i];
         if (rem < 0)
         {
-            index++;
-            i = index - 1;
-            count = -1;
+            index = i + 1;
             rem = 0;
         }
-        if (i == n - 1)
-            i = -1;
-        i++;
-        count++;
     }
 
-    if (index == n)
-        return -1;
-    else
-        return index;
+    return index;
+
+    // int index = 0, rem = 0, minRem;
+    // for (int i = 0; i < n; i++)
+    // {
+    //     rem = rem + gas[i] - cost[i];
+    //     if (rem < minRem)
+    //     {
+    //         minRem = rem;
+    //         index = i;
+    //     }
+    // }
+
+    // return index + 1;
 }
 
 int main()
 {
-    // vector<int> gas = {1, 2, 3, 4, 5};
-    // vector<int> cost = {3, 4, 5, 1, 2}; // 3
-    vector<int> gas = {2, 3, 4};
-    vector<int> cost = {3, 4, 3}; // -1
+    vector<int> gas = {1, 2, 3, 4, 5};
+    vector<int> cost = {3, 4, 5, 1, 2}; // 3
+    // vector<int> gas = {2, 3, 4};
+    // vector<int> cost = {3, 4, 3}; // -1
 
     int ans = canCompleteCircuit(gas, cost);
     cout << ans;
