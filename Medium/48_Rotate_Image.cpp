@@ -21,6 +21,8 @@ void rotate(vector<vector<int>> &matrix)
     int row = matrix.size();
     int col = matrix[0].size();
 
+    Print2DArrayVector(matrix);
+
     // Reverse Col
     for (int j = 0; j < col; j++)
     {
@@ -32,6 +34,8 @@ void rotate(vector<vector<int>> &matrix)
             end--;
         }
     }
+
+    Print2DArrayVector(matrix);
 
     // Transpose Matrix
     for (int i = 0; i < row; i++)
