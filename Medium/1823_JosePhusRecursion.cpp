@@ -33,13 +33,24 @@ int findTheWinner(int n, int k)
     return 1;
 }
 
+int joseRec(int n, int k)
+{
+    if (n == 1)
+        return 0;
+
+    return (joseRec(n - 1, k) + k) % n;
+}
+
 int main()
 {
     // int n = 5, k = 2; // 3
     // int n = 6, k = 5; // 1
     int n = 1, k = 1; // 1
 
-    int ans = findTheWinner(n, k);
-    cout << ans;
+    // int ans = findTheWinner(n, k);
+    // cout << ans;
+
+    int ans = joseRec(n, k);
+    cout << ans + 1;
     return 0;
 }
