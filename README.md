@@ -12,6 +12,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/shrey-s12/LeetCode/tree/master/0042-trapping-rain-water) |
+| [0053-maximum-subarray](https://github.com/shrey-s12/LeetCode/tree/master/0053-maximum-subarray) |
 | [1025-divisor-game](https://github.com/shrey-s12/LeetCode/tree/master/1025-divisor-game) |
 ## Brainteaser
 |  |
@@ -26,6 +27,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0001-two-sum](https://github.com/shrey-s12/LeetCode/tree/master/0001-two-sum) |
 | [0042-trapping-rain-water](https://github.com/shrey-s12/LeetCode/tree/master/0042-trapping-rain-water) |
+| [0053-maximum-subarray](https://github.com/shrey-s12/LeetCode/tree/master/0053-maximum-subarray) |
 | [0056-merge-intervals](https://github.com/shrey-s12/LeetCode/tree/master/0056-merge-intervals) |
 | [0088-merge-sorted-array](https://github.com/shrey-s12/LeetCode/tree/master/0088-merge-sorted-array) |
 | [1331-rank-transform-of-an-array](https://github.com/shrey-s12/LeetCode/tree/master/1331-rank-transform-of-an-array) |
@@ -57,4 +59,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [3658-gcd-of-odd-and-even-sums](https://github.com/shrey-s12/LeetCode/tree/master/3658-gcd-of-odd-and-even-sums) |
+## Divide and Conquer
+|  |
+| ------- |
+| [0053-maximum-subarray](https://github.com/shrey-s12/LeetCode/tree/master/0053-maximum-subarray) |
 <!---LeetCode Topics End-->
